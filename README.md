@@ -35,7 +35,6 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 ## Which Browsers/Devices or Virtualisation services did you check the application in?
 Mozilla Firefox / Mac computer
 Chrome / Mac computer
-Chrome / Android emulator
 
 
 ## Anything you want to tell us?
