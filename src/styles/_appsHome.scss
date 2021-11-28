@@ -1,0 +1,161 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* DESKTOP VERSION */
+main {
+    position: relative;
+    z-index: 0;
+    .carousel {
+        .swiper {
+            width: 100%;
+            height: 600px;
+            .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                &.slide1 {
+                    background-image: url("../img/carousel/studio.png");
+                }
+                &.slide2 {
+                    background-image: url("../img/carousel/mountains.jpg");
+                    .slide-content {
+                        p {
+                            font-size: 30px;
+                        }
+                    }
+                }
+                &.slide3 {                    
+                    background-image: url("../img/carousel/sand.jpg");
+                    .slide-content {
+                        p {
+                            font-size: 30px;
+                        }
+                    }
+                }
+                .slide-content {
+                    color: var(--white);
+                    width: 70%;
+                    p {
+                        font-weight: 200;
+                        font-size: 12px;
+                    }
+                    h2 {
+                        font-weight: 200;
+                        font-size: 30px;
+                    }
+                }
+            }
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                font-size: 25px;
+            }
+        }
+    }
+    .imagination {
+        height: 700px;
+        .imagination__image {
+            width: 50%;
+            background-image: url("../img/mountain.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .imagination__content {
+            width: 50%;
+            background-color: transparent;
+            button {
+                width: -webkit-max-content;
+                width: -moz-max-content;
+                width: max-content;
+            }
+        }
+    }
+}
+
+/* RESPONSIVE SIZES */
+@include min-responsive-size(780px) {
+    /* DESIGN COMPONENTS */
+    .content-block {
+        padding: 120px 50px;
+    }
+}
+
+@include min-responsive-size(530px) {
+    /* DESIGN COMPONENTS */
+    .content-block {
+        padding: 50px 20px;
+    }
+    .action-button {
+        a {
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+    }
+
+    /* REGULAR SELECTORS */
+    
+    main {
+        .carousel {
+            .swiper {
+                height: 300px;
+                .swiper-button-next::after,
+                .swiper-button-prev::after {
+                    font-size: 12px;
+                }
+                .swiper-slide .slide-content {
+                    p {
+                        font-size: 15px;
+                    }
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+        .innovation-experience {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+        .imagination {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+            .imagination__image {
+                height: 500px;
+                width: 100%;
+            }
+            .imagination__content {
+                width: 100%;
+            }
+        }
+    }    
+}
+
+@include min-responsive-size(450px) {    
+    main .carousel .swiper .swiper-slide.slide1 {
+        background-size: 600px;
+        background-position: left;
+    }
+}
+
+@include min-responsive-size(390px) {
+    main .carousel .swiper .swiper-slide.slide1 {
+        background-position-x: -70px;
+    }
+}
+@include min-responsive-size(300px) {
+    main .carousel .swiper .swiper-slide.slide1 {
+        background-position-x: -83px;
+    }
+}
+@include min-responsive-size(286px) {
+    main .carousel .swiper .swiper-slide.slide1 {
+        background-position-x: -76px;
+    }
+}

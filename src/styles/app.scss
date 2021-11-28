@@ -1,0 +1,181 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400&display=swap");
+
+@mixin min-responsive-size($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --white: #fff;
+  --black: #000;
+  --alertColor: #ff2626;
+  --basicBackround: #fff;
+  --actionColor: #448aff;
+  --actionTextColor: #fff;
+  --textColor: #000;
+  --lightBackgroundColor: #fafafa;
+  --tableHeaderBorder: #eee;
+  --buttonHoverColor: #cccccc;
+  --snIconColor: #6c6c6c;
+  --swiper-theme-color: #fff;
+  --unabledItem: #b1b1b1;
+
+  /* FONT */
+  --basicFont: "Libre Franklin";
+  --menuFontSize: 12px;
+  --textFontSize: 16px;
+  --sectionTitle: 28px;
+}
+
+/* DARK THEME */
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --basicBackround: #000000;
+        --actionColor: #448AFF;
+        --actionTextColor: #fff;
+        --textColor: #fff;
+        --lightBackgroundColor: #343434;
+        --buttonHoverColor:#717171; 
+        --snIconColor: #e0e0e0;  
+        --white: #000000;
+        --black: #ffffff;
+        img.invert {
+            filter: invert(1);
+        }      
+        header {
+          box-shadow: none;
+        }
+        .action-button  {
+          &:hover {
+            --actionTextColor: #000;   
+          }  
+        }
+    }
+} */
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--basicBackround);
+  font-family: var(--basicFont, sans-serif);
+  &.darkTheme {
+    --basicBackround: rgb(0, 0, 0);
+    --actionColor: #448aff;
+    --lightBackgroundColor: #343434;
+    --buttonHoverColor: #717171;
+    --snIconColor: #e0e0e0;
+  }
+  &.lightTheme {
+    --basicBackround: #fff;
+    --actionColor: #448aff;
+    --lightBackgroundColor: #fafafa;
+    --buttonHoverColor: #cccccc;
+    --snIconColor: #6c6c6c;
+  }
+}
+
+/* SCROLL REVEAL DEACTIVATE WHEN NOT SUPPORTED */
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+/* COMON CLASSES */
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.align-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.fadeOut {
+  -webkit-animation: fadeOutAnimation .5s ease;
+          animation: fadeOutAnimation .5s ease;    
+}
+
+@import "components";
+@import "appsHome";
+@import "cart";
